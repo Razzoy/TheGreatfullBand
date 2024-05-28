@@ -3,6 +3,12 @@
 $standard-border: 4px solid black;
 $standard-color: #d51b1b;
 
+@mixin gridColumns ($amount) {
+    display: grid;
+    grid-template-columns: repeat($amount, 1fr);
+}
+// @include gridColumns(3)
+
 body{
     margin: 0;
     position: relative;
@@ -49,6 +55,13 @@ body{
         }
         img:first-child{
             width: 25%;
+        }
+        ul{
+            li{
+                &:hover{
+                    color: $standard-color;
+                }
+            }
         }
     }
 }

@@ -45,6 +45,9 @@ body {
 .nav-main figure img:first-child {
   width: 25%;
 }
+.nav-main figure ul li:hover {
+  color: #d51b1b;
+}
 
 .footer-main {
   background-color: #d51b1b;
