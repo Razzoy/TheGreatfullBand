@@ -7,7 +7,17 @@ $standard-color: #d51b1b;
     display: grid;
     grid-template-columns: repeat($amount, 1fr);
 }
-// @include gridColumns(3)
+
+@mixin flexing ($dir, $justify){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+}
+
+@mixin margiPad ($margin, $padding){
+    margin: $margin;
+    padding: $padding;
+}
 
 body{
     margin: 0;
@@ -20,11 +30,12 @@ body{
 
 .background{
     height: 100%;
-    min-width: 100%;
+    width: 100%;
     position: absolute;
     display: block;
     z-index: 1;
-    bottom: 0;
+    top: 360px;
+
 }
 
 .container-main{
@@ -46,21 +57,27 @@ body{
 
 .nav-main{
     figure{
-        margin: 0;
-        display: flex;
         gap: 1rem;
-        justify-content: center;
+        @include margiPad(0,0);
+        @include flexing(row,center);
         img{
             width: 50%;
         }
         img:first-child{
             width: 25%;
         }
-        ul{
-            li{
-                &:hover{
-                    color: $standard-color;
-                }
+    }
+    ul{
+        background-color: $standard-color;
+        list-style: none;
+        @include margiPad(0, 1.5rem);
+        @include flexing(row,space-evenly);
+
+        li{
+            
+            &:hover{
+                cursor: pointer;;
+                color: $standard-color;
             }
         }
     }
@@ -71,7 +88,7 @@ main{
 
 .footer-main{
     background-color: $standard-color;
-    position: fixed;
+    // position: fixed;
     padding: 1rem 0;
     width: 100%;
     top: 800px;

@@ -10,11 +10,11 @@ body {
 
 .background {
   height: 100%;
-  min-width: 100%;
+  width: 100%;
   position: absolute;
   display: block;
   z-index: 1;
-  bottom: 0;
+  top: 360px;
 }
 
 .container-main {
@@ -34,9 +34,11 @@ body {
 }
 
 .nav-main figure {
-  margin: 0;
-  display: flex;
   gap: 1rem;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 .nav-main figure img {
@@ -45,13 +47,22 @@ body {
 .nav-main figure img:first-child {
   width: 25%;
 }
-.nav-main figure ul li:hover {
+.nav-main ul {
+  background-color: #d51b1b;
+  list-style: none;
+  margin: 0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.nav-main ul li:hover {
+  cursor: pointer;
   color: #d51b1b;
 }
 
 .footer-main {
   background-color: #d51b1b;
-  position: fixed;
   padding: 1rem 0;
   width: 100%;
   top: 800px;
