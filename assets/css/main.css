@@ -3,6 +3,11 @@ html {
   font-family: "Oswald", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 body {
   margin: 0;
   position: relative;
@@ -34,6 +39,12 @@ body {
   font-size: 5rem;
 }
 
+.nav-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  gap: 1rem;
+}
 .nav-main figure {
   gap: 1rem;
   margin: 0;
@@ -52,19 +63,24 @@ body {
   background-color: #d51b1b;
   list-style: none;
   margin: 0;
-  padding: 1.5rem;
+  padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  padding: 1.5rem 0;
 }
 .nav-main ul li a {
-  font-size: 1rem;
-  text-decoration: none;
-  color: #fff;
+  font-size: 1.2rem;
 }
 .nav-main ul li:hover {
   cursor: pointer;
   color: #d51b1b;
+}
+
+.intro {
+  background-color: rgba(34, 34, 34, 0.4666666667);
+  padding: 1rem;
+  margin: 2rem 0;
 }
 
 .footer-main {

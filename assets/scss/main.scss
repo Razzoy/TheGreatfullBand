@@ -23,6 +23,11 @@ html{
     font-family: "Oswald", sans-serif;
 }
 
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
 body{
     margin: 0;
     position: relative;
@@ -59,6 +64,8 @@ body{
 }
 
 .nav-main{
+    @include flexing(column,none);
+    gap: 1rem;
     figure{
         gap: 1rem;
         @include margiPad(0,0);
@@ -73,14 +80,13 @@ body{
     ul{
         background-color: $standard-color;
         list-style: none;
-        @include margiPad(0, 1.5rem);
+        @include margiPad(0, 0);
         @include flexing(row,space-evenly);
+        padding: 1.5rem 0;
 
         li{
             a{
-                font-size: 1rem;
-                text-decoration: none;
-                color: #fff;
+                font-size: 1.2rem;
             }
             &:hover{
                 cursor: pointer;
@@ -91,8 +97,14 @@ body{
     }
 }
 
-
+// MAIN SECTION //
 main{
+}
+
+.intro{
+    background-color: #22222277;
+    padding: 1rem;
+    margin: 2rem 0;
 }
 
 .footer-main{
