@@ -1,0 +1,15 @@
+@mixin gridColumns ($amount) {
+    display: grid;
+    grid-template-columns: repeat($amount, 1fr);
+}
+
+@mixin flexing ($dir, $justify){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+}
+
+@mixin margiPad ($margin, $padding){
+    margin: $margin;
+    padding: $padding;
+}

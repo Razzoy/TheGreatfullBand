@@ -1,23 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@use "./helper/_mixins";
+@use "./helper/_placeholders";
+@use "./helper/_variables";
 
-$standard-border: 4px solid black;
-$standard-color: #d51b1b;
-
-@mixin gridColumns ($amount) {
-    display: grid;
-    grid-template-columns: repeat($amount, 1fr);
-}
-
-@mixin flexing ($dir, $justify){
-    display: flex;
-    flex-direction: $dir;
-    justify-content: $justify;
-}
-
-@mixin margiPad ($margin, $padding){
-    margin: $margin;
-    padding: $padding;
-}
 
 html{
     font-family: "Oswald", sans-serif;
