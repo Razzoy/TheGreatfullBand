@@ -1,7 +1,10 @@
+//Importer hjælpe scss filer
+@use "./helper/_animations" as *;
+@use "./helper/_mixins" as *;
+@use "./helper/_placeholders" as *;
+@use "./helper/_variables" as *;
+//Impoter font
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-@use "./helper/_mixins";
-@use "./helper/_placeholders";
-@use "./helper/_variables";
 
 
 html{
@@ -22,20 +25,11 @@ body{
     color: #fff;
 }
 
-.background{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    display: block;
-    z-index: 1;
-    top: 360px;
 
-}
 
 .container-main{
     max-width: 100%;
     position: relative;
-    z-index: 9;
     padding: 1rem;
 }
 
@@ -46,7 +40,20 @@ body{
 
         font-size: 5rem;
     }
+    img {
+        width: 100%;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+      }
 }
+
+.fade-in {
+    animation-name: fadeIn;
+  }
+
+  .fade-out {
+    animation-name: fadeOut;
+  }
 
 .nav-main{
     @include flexing(column,none);
@@ -88,6 +95,15 @@ body{
     background-color: #22222277;
     padding: 1rem;
     margin: 2rem 0;
+}
+
+.about{
+    img{
+        height: 100%;
+        width: 100%;
+        display: block;
+    
+    }
 }
 
 .footer-main{
